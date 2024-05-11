@@ -1,0 +1,19 @@
+.DS_Store
+
+# Bazel workspace directory
+/bazel-*
+
+# Bazel build output directory
+/bazel-out/
+
+# Bazel symlinks created in the workspace
+/bazel-bin/
+/bazel-testlogs/
+/bazel-genfiles/  # Older versions of Bazel used this directory
+
+# Bazel internal directories
+/.bazelrc
+/.bazelversion
+
+# Bazel cache directories outside the workspace
+.cache/bazel/

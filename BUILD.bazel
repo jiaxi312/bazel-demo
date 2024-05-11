@@ -1,0 +1,13 @@
+load("@buildifier_prebuilt//:rules.bzl", "buildifier")
+load("@gazelle//:def.bzl", "gazelle")
+
+gazelle(name = "gazelle")
+
+buildifier(
+    name = "buildifier",
+    exclude_patterns = [
+        "./.git/*",
+    ],
+    # To force format the BUILD files, use --lint_mode = "fix"
+    lint_mode = "fix",
+)
